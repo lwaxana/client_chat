@@ -1,0 +1,33 @@
+- Generer la DB 
+
+- Dans la table serveur :
+
+Enregistrer 1 serveur ( nom, IP sur le reseau ( pas de 127.0.0.1 ), les autres champs
+peuvent être à NULL ).
+
+- Dans la table TypeSalon
+
+Enregister au moins 1 type salon
+
+- Dans la table salon
+
+Enregister au moins 1 salon ( + id serveur + id typeSalon) avec un nom. Les autres
+champs peuvent être à NULL
+
+- Lancer l'application Chat Client
+
+- Menu Outils / Paramètres / Onglet Serveur
+
+Enregister IP serveur et le port du serveur. => OK
+
+- Menu de bienvenue proceder à l'inscription ( attention pas encore de
+controles de champs implémentés ) ( 2 pages + valider ).
+
+- Menu login apparait ( entrer login et pass ).
+
+- Dans la fenetre infos à droite ( si tout s'est bien passé )
+les informations du serveur apparaissent ainsi que les channels disponnibles.
+
+Double clic sur un channel pour ouvrir une nouvelle fenetre et la discution 
+peut commencer
+

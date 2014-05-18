@@ -1,0 +1,29 @@
+Pour la version actuelle :
+
+- Verif saisies (  adresse )
+- DroitS Kick Moderateurs ( droits ok pas encore implementé kick )
+- Droits Admin ( droits ok pas encore implementé ban)
+- Stocker activit� serveur / Salon dans DB
+- Creation nouveau salon ( user / moderateur / admin )
+- Creation nouveau moderateurs / admin
+- Messages PV
+- Terminer menu param�tres ( fichier properties )
+- Implementation Password salons / serveur
+- Stocker les logs
+- Refaire liste salon dispo // custon // icone // infos
+- mise à jour infos user
+ 
+
+Si j'ai le temps :
+
+- Interface graphique de gestion du serveur
+- Recoder une partie des fenetres client ( WIIF OK - INFOS2 OK - PARAMETRES NOK )
+- Ajouter description salon
+- Ajout option h/f pour icon user
+- changer icon user / mod / admin
+- Avatar personnalis� user 
+- Barre info serveur dans JFrame au lieu d'internal Frame
+- Barre de status
+- Barre de raccourcis
+- Regler problemes de SSL
+-  
