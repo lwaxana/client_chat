@@ -1,0 +1,139 @@
+format 76
+
+classcanvas 128005 class_ref 128005 // Utilisateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 180 285 2000
+end
+subject 128389 ""
+  xyzwh 262 29 2000 947 753
+classcanvas 128645 class_ref 128517 // DB
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 1234 353 2000
+end
+classcanvas 129157 class_ref 128133 // Moderateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 178 427 2006
+end
+classcanvas 129669 class_ref 128261 // Administrateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 169 598 2005
+end
+classcanvas 129925 class_ref 128645 // Personne
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 180 75 2005
+end
+usecasecanvas 130181 usecase_ref 128005 // S'inscrire comme utilisateur
+  xyzwh 696 45 3005 64 32 label_xy 663 77
+end
+note 130693 "Tous les cas Utilisateur, Moderateur
+et Administrateur éxigent d'être authentifié"
+  xyzwh 1000 48 2005 109 125
+note 130949 "Interaction DataBase"
+  xyzwh 1164 493 2000 79 57
+note 131077 "Serveur Chat"
+  xyzwh 1073 208 3011 99 35
+usecasecanvas 132101 usecase_ref 128261 // S'authentifier
+  xyzwh 413 112 3005 64 32 label_xy 413 144
+end
+usecasecanvas 133509 usecase_ref 128389 // Gérer son compte
+  xyzwh 427 268 3005 64 32 label_xy 416 300
+end
+usecasecanvas 134277 usecase_ref 128645 // rejoindre un salon
+  xyzwh 399 342 3005 64 32 label_xy 388 374
+end
+usecasecanvas 134533 usecase_ref 128517 // Envoyer des messages
+  xyzwh 664 340 3005 64 32 label_xy 639 372
+end
+usecasecanvas 135045 usecase_ref 128773 // Envoyer des messages privés
+  xyzwh 926 373 3005 64 32 label_xy 885 405
+end
+usecasecanvas 135173 usecase_ref 128901 // Envoyer des messages publics
+  xyzwh 1008 484 3005 64 32 label_xy 965 516
+end
+usecasecanvas 135557 usecase_ref 129029 // Quitter un salon
+  xyzwh 612 436 3005 64 32 label_xy 606 468
+end
+usecasecanvas 135813 usecase_ref 129157 // Consulter les logs de conversation
+  xyzwh 702 577 3005 64 32 label_xy 651 609
+end
+usecasecanvas 136325 usecase_ref 129285 // Créer un salon privé
+  xyzwh 509 653 3005 64 32 label_xy 493 685
+end
+usecasecanvas 137605 usecase_ref 129541 // Modifier pseudo
+  xyzwh 321 187 3005 64 32 label_xy 315 219
+end
+usecasecanvas 137733 usecase_ref 129669 // Modifier infos perso
+  xyzwh 518 169 3005 64 32 label_xy 502 201
+end
+usecasecanvas 137861 usecase_ref 129797 // Modifier mot de passe
+  xyzwh 675 208 3013 64 32 label_xy 654 240
+end
+usecasecanvas 140933 usecase_ref 129925 // Gere salon
+  xyzwh 739 675 3005 64 32 label_xy 744 707
+end
+relationcanvas 129541 relation_ref 128133 // <generalisation>
+  decenter_begin 476
+  from ref 129157 z 2007 to ref 128005
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129797 relation_ref 128261 // <generalisation>
+  from ref 129669 z 2007 to ref 129157
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130053 relation_ref 128389 // <generalisation>
+  from ref 128005 z 2006 to ref 129925
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 130437 ----
+  from ref 129925 z 3006 to ref 130181
+line 132357 --->
+  from ref 132101 z 3006 to point 794 157
+  line 137093 z 3006 to ref 128645
+line 133637 ----
+  from ref 133509 z 3006 to ref 128005
+line 133765 --->
+  from ref 133509 z 3006 to ref 128645
+line 134405 ----
+  from ref 128005 z 3006 to ref 134277
+simplerelationcanvas 134661 simplerelation_ref 128261
+  from ref 134277 z 3006 stereotype "<<include>>" xyz 533 355 3000 to ref 134533
+end
+simplerelationcanvas 135301 simplerelation_ref 128389
+  decenter_end 280
+  from ref 135045 z 3006 to ref 134533
+end
+simplerelationcanvas 135429 simplerelation_ref 128517
+  from ref 135173 z 3006 to ref 134533
+end
+line 135941 ----
+  from ref 128005 z 3006 to ref 135813
+line 136453 ----
+  from ref 128005 z 3006 to ref 136325
+simplerelationcanvas 137989 simplerelation_ref 128645
+  from ref 137605 z 3006 to ref 133509
+end
+simplerelationcanvas 138117 simplerelation_ref 128773
+  decenter_begin 717
+  from ref 137733 z 3006 to ref 133509
+end
+simplerelationcanvas 138245 simplerelation_ref 128901
+  from ref 137861 z 3014 to ref 133509
+end
+simplerelationcanvas 140805 simplerelation_ref 129541
+  from ref 134277 z 3006 stereotype "<<include>>" xyz 507 403 3000 to ref 135557
+end
+line 141061 --->
+  from ref 130181 z 3006 to ref 128645
+simplerelationcanvas 141189 simplerelation_ref 138629
+  from ref 136325 z 3006 stereotype "<<include>>" xyz 626 678 3000 to ref 140933
+end
+line 131205 -_-_
+  from ref 131077 z 3012 to ref 128389
+line 131333 -_-_
+  from ref 128645 z 2001 to ref 130949
+line 133253 -_-_
+  from ref 130693 z 3006 to ref 132101
+end

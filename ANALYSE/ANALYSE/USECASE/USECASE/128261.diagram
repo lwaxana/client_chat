@@ -1,0 +1,170 @@
+format 76
+
+subject 128005 ""
+  xyzwh 198 18 2000 890 761
+classcanvas 128133 class_ref 128005 // Utilisateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 130 213 2005
+end
+classcanvas 128261 class_ref 128645 // Personne
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 129 71 2011
+end
+classcanvas 128517 class_ref 128133 // Moderateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 126 393 2011
+end
+classcanvas 128773 class_ref 128261 // Administrateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 117 606 2017
+end
+classcanvas 129029 class_ref 128517 // DB
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 1109 380 2000
+end
+usecasecanvas 129157 usecase_ref 130693 // Gere serveur
+  xyzwh 505 165 3005 64 32 label_xy 570 176
+end
+usecasecanvas 129285 usecase_ref 130821 // Gere les salons
+  xyzwh 673 297 3005 64 32 label_xy 687 331
+end
+usecasecanvas 129413 usecase_ref 130949 // Modifie parametres serveur
+  xyzwh 243 161 3005 64 32 label_xy 209 193
+end
+usecasecanvas 129797 usecase_ref 131077 // Gere les utilisateurs
+  xyzwh 581 725 3005 64 32 label_xy 565 757
+end
+usecasecanvas 130181 usecase_ref 131205 // Demarrer un serveur
+  xyzwh 237 82 3005 64 32 label_xy 219 114
+end
+usecasecanvas 130437 usecase_ref 131333 // Arreter un serveur
+  xyzwh 477 30 3005 64 32 label_xy 464 62
+end
+usecasecanvas 130693 usecase_ref 131461 // Consulter log serveur
+  xyzwh 333 35 3005 64 32 label_xy 313 67
+end
+usecasecanvas 131077 usecase_ref 131589 // Creer salon public
+  xyzwh 690 106 3005 64 32 label_xy 679 138
+end
+usecasecanvas 131589 usecase_ref 131717 // Gere les moderateurs
+  xyzwh 571 570 3005 64 32 label_xy 551 602
+end
+usecasecanvas 131845 usecase_ref 130437 // Ferme salon public
+  xyzwh 816 109 3005 64 32 label_xy 803 141
+end
+usecasecanvas 132101 usecase_ref 131845 // Modifie nom salon
+  xyzwh 924 150 3005 64 32 label_xy 914 182
+end
+usecasecanvas 132229 usecase_ref 132101 // Modifie type salon
+  xyzwh 940 224 3011 64 32 label_xy 929 256
+end
+usecasecanvas 132613 usecase_ref 132229 // Ajouter serveur
+  xyzwh 237 232 3005 64 32 label_xy 231 264
+end
+usecasecanvas 132869 usecase_ref 132357 // Supprimer serveur
+  xyzwh 251 325 3005 64 32 label_xy 238 357
+end
+usecasecanvas 133381 usecase_ref 132485 // ajoute administrateur
+  xyzwh 510 290 3005 64 32 label_xy 492 322
+end
+usecasecanvas 133637 usecase_ref 132613 // nomme nouveau moderateur
+  xyzwh 474 455 3005 64 32 label_xy 438 487
+end
+usecasecanvas 133893 usecase_ref 132741 // renvoie moderateur
+  xyzwh 604 410 3005 64 32 label_xy 589 442
+end
+usecasecanvas 134149 usecase_ref 132869 // Attribue salon à moderateur
+  xyzwh 397 525 3005 64 32 label_xy 362 557
+end
+usecasecanvas 134789 usecase_ref 132997 // Banni utilisateur
+  xyzwh 418 662 3005 64 32 label_xy 412 694
+end
+usecasecanvas 135045 usecase_ref 133125 // reinitialise compte
+  xyzwh 575 640 3005 64 32 label_xy 565 672
+end
+relationcanvas 128389 relation_ref 128389 // <generalisation>
+  from ref 128133 z 2012 to ref 128261
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128645 relation_ref 128133 // <generalisation>
+  from ref 128517 z 2012 to ref 128133
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128901 relation_ref 128261 // <generalisation>
+  from ref 128773 z 2018 to ref 128517
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 129541 ----
+  from ref 129157 z 3006 to ref 128773
+line 129669 ----
+  from ref 129285 z 3006 to ref 128773
+line 129925 ----
+  from ref 128773 z 3006 to point 262 748
+  line 134533 z 3006 to ref 129797
+simplerelationcanvas 130053 simplerelation_ref 130053
+  from ref 129413 z 3006 to ref 129157
+end
+simplerelationcanvas 130309 simplerelation_ref 130181
+  from ref 130181 z 3006 to ref 129157
+end
+simplerelationcanvas 130565 simplerelation_ref 130309
+  from ref 130437 z 3006 to ref 129157
+end
+simplerelationcanvas 130821 simplerelation_ref 130437
+  from ref 130693 z 3006 to ref 129157
+end
+line 130949 --->
+  from ref 129157 z 3006 to point 686 41
+  line 132741 z 3006 to point 1052 45
+  line 131717 z 3006 to ref 129029
+simplerelationcanvas 131205 simplerelation_ref 130565
+  from ref 131077 z 3006 to ref 129285
+end
+line 131333 --->
+  from ref 129285 z 3006 to ref 129029
+line 131461 --->
+  from ref 129797 z 3006 to point 1001 720
+  line 134661 z 3006 to ref 129029
+simplerelationcanvas 131973 simplerelation_ref 130693
+  from ref 131845 z 3006 to ref 129285
+end
+simplerelationcanvas 132357 simplerelation_ref 130821
+  from ref 132101 z 3006 to ref 129285
+end
+simplerelationcanvas 132485 simplerelation_ref 130949
+  from ref 132229 z 3012 to ref 129285
+end
+simplerelationcanvas 132997 simplerelation_ref 131077
+  from ref 132613 z 3006 to ref 129157
+end
+simplerelationcanvas 133125 simplerelation_ref 131205
+  from ref 132869 z 3006 to ref 129157
+end
+line 133253 ----
+  from ref 128773 z 3006 to ref 131589
+simplerelationcanvas 133509 simplerelation_ref 131333
+  from ref 133381 z 3006 to ref 129157
+end
+simplerelationcanvas 133765 simplerelation_ref 131461
+  from ref 133637 z 3006 to ref 131589
+end
+simplerelationcanvas 134021 simplerelation_ref 131589
+  decenter_begin 437
+  from ref 133893 z 3006 to ref 131589
+end
+simplerelationcanvas 134277 simplerelation_ref 131717
+  from ref 134149 z 3006 to ref 131589
+end
+line 134405 --->
+  from ref 131589 z 3006 to ref 129029
+simplerelationcanvas 134917 simplerelation_ref 131845
+  from ref 134789 z 3006 to ref 129797
+end
+simplerelationcanvas 135173 simplerelation_ref 131973
+  decenter_begin 560
+  from ref 135045 z 3006 to ref 129797
+end
+end

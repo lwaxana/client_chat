@@ -1,0 +1,74 @@
+format 76
+
+subject 128005 ""
+  xyzwh 188 28 2000 1021 757
+classcanvas 128133 class_ref 128517 // DB
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 1236 324 2000
+end
+classcanvas 128261 class_ref 128645 // Personne
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 119 74 2000
+end
+classcanvas 128389 class_ref 128005 // Utilisateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 119 213 2006
+end
+classcanvas 128645 class_ref 128133 // Moderateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 113 365 2012
+end
+classcanvas 128901 class_ref 128261 // Administrateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 105 553 2018
+end
+usecasecanvas 129157 usecase_ref 129925 // Gere salon
+  xyzwh 394 348 3005 64 32 label_xy 382 331
+end
+usecasecanvas 129413 usecase_ref 130053 // Ejecter un utilisateur
+  xyzwh 298 182 3011 64 32 label_xy 282 214
+end
+usecasecanvas 129669 usecase_ref 130181 // Modifier description salon
+  xyzwh 477 200 3011 64 32 label_xy 448 232
+end
+usecasecanvas 130821 usecase_ref 130565 // Consulter infos utilisateurs
+  xyzwh 423 431 3005 64 32 label_xy 391 463
+end
+usecasecanvas 132229 usecase_ref 131973 // Consulte log salons
+  xyzwh 443 564 3005 64 32 label_xy 428 596
+end
+relationcanvas 128517 relation_ref 128389 // <generalisation>
+  from ref 128389 z 2007 to ref 128261
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128773 relation_ref 128133 // <generalisation>
+  from ref 128645 z 2013 to ref 128389
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129029 relation_ref 128261 // <generalisation>
+  from ref 128901 z 2019 to ref 128645
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 129285 ---- decenter_begin 656
+  from ref 129157 z 3006 to ref 128645
+simplerelationcanvas 129541 simplerelation_ref 129285
+  decenter_begin 280
+  from ref 129413 z 3012 to ref 129157
+end
+simplerelationcanvas 129797 simplerelation_ref 129157
+  from ref 129669 z 3012 to ref 129157
+end
+line 130949 ----
+  from ref 128645 z 3006 to ref 130821
+line 131077 --->
+  from ref 130821 z 3006 to ref 128133
+line 131461 --->
+  from ref 129157 z 3006 to ref 128133
+line 132357 ----
+  from ref 128645 z 3006 to ref 132229
+line 132485 --->
+  from ref 132229 z 3006 to ref 128133
+end

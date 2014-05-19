@@ -1,0 +1,16 @@
+window_sizes 1920 1018 285 1629 720 82
+diagrams
+  active  usecasediagram_ref 128005 // Usecase1
+    1629 862 100 17 0 0
+  usecasediagram_ref 128133 // Usecase2
+    1299 689 100 17 0 0
+  usecasediagram_ref 128261 // UseCase3
+    1299 689 100 17 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128005 // Usecase1
+open
+  class_ref 128133 // Moderateur
+  class_ref 128261 // Administrateur
+end
+end

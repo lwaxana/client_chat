@@ -1,0 +1,12 @@
+window_sizes 1920 1018 249 1665 720 82
+diagrams
+  active  classdiagram_ref 128005 // classdiag
+    1665 862 100 18 0 0
+end
+show_stereotypes
+selected class_ref 129541 // Logserveur
+open
+  classview_ref 128005 // classview
+  deploymentview_ref 128005 // deployview
+end
+end
