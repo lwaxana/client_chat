@@ -1,11 +1,2 @@
 /client
-/comm
-/control
-/ihm
-/listener
-/main
-/message
 /tests
-/typemessage
-/userlist
-/utils
