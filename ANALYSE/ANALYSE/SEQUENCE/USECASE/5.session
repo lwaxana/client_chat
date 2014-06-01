@@ -1,0 +1,14 @@
+window_sizes 1920 1018 285 1629 720 82
+diagrams
+  active  sequencediagram_ref 134789 // SEQUENCE
+    1629 862 100 4 0 0
+  usecasediagram_ref 128005 // Usecase1
+    1299 689 100 17 0 0
+end
+show_stereotypes
+selected class_ref 128645 // Personne
+open
+  class_ref 128133 // Moderateur
+  class_ref 128261 // Administrateur
+end
+end

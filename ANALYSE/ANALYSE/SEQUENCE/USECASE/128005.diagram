@@ -30,8 +30,6 @@ et Administrateur éxigent d'être authentifié"
   xyzwh 1000 48 2005 109 125
 note 130949 "Interaction DataBase"
   xyzwh 1164 493 2000 79 57
-note 131077 "Serveur Chat"
-  xyzwh 1073 208 3011 99 35
 usecasecanvas 132101 usecase_ref 128261 // S'authentifier
   xyzwh 791 90 3005 64 32 label_xy 791 122
 end
@@ -73,6 +71,10 @@ usecasecanvas 140933 usecase_ref 129925 // Gere salon
 end
 usecasecanvas 141829 usecase_ref 139781 // Fermer salon privé
   xyzwh 593 712 3005 64 32 label_xy 580 744
+end
+classcanvas 142213 class_ref 135173 // Serveur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 1232 95 2000
 end
 relationcanvas 129541 relation_ref 128133 // <generalisation>
   decenter_begin 476
@@ -127,7 +129,7 @@ simplerelationcanvas 141317 simplerelation_ref 145157
   from ref 134533 z 3006 stereotype "<<include>>" xyz 533 355 3000 to ref 134277
 end
 simplerelationcanvas 141445 simplerelation_ref 145285
-  from ref 135557 z 3006 stereotype "<<include>>" xyz 526 399.5 3000 to ref 134277
+  from ref 135557 z 3006 stereotype "<<include>>" xyz 526 399 3000 to ref 134277
 end
 simplerelationcanvas 141701 simplerelation_ref 145413
   from ref 140933 z 3006 stereotype "<<include>>" xyz 627 653 3000 to ref 136325
@@ -135,10 +137,10 @@ end
 simplerelationcanvas 141957 simplerelation_ref 145541
   from ref 141829 z 3006 stereotype "<<include>>" xyz 554 673 3000 to ref 136325
 end
-line 131205 -_-_
-  from ref 131077 z 3012 to ref 128389
 line 131333 -_-_
   from ref 128645 z 2001 to ref 130949
 line 133253 -_-_
   from ref 130693 z 3006 to ref 132101
+line 142341 -_-_
+  from ref 142213 z 2001 to ref 128389
 end

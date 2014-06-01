@@ -3,8 +3,8 @@
 -- *--------------------------------------------
 -- * DB-MAIN version: 9.1.6              
 -- * Generator date: Feb 25 2013              
--- * Generation date: Sat May 17 11:29:15 2014 
--- * LUN file: C:\Users\Lwaxana\Desktop\Chat EXAM\ChatV1.lun 
+-- * Generation date: Sun Jun 01 21:04:56 2014 
+-- * LUN file: C:\Users\Lwaxana\Desktop\ANALYSE\DB\ChatV1.lun 
 -- * Schema: mcd5/2/1-1 
 -- ********************************************* 
 
@@ -12,15 +12,15 @@
 -- Database Section
 -- ________________ 
 
-create database chat;
-use chat;
+create database chat3;
+use chat3;
 
 
 -- Tables Section
 -- _____________ 
 
 create table activitesalon (
-     idactivite int not null,
+     idactivite int not null AUTO_INCREMENT,
      heure date not null,
      activite varchar(250) not null,
      iduser int not null,
@@ -29,7 +29,7 @@ create table activitesalon (
      constraint ID_activitesalon_ID primary key (idactivite));
 
 create table activiteserveur (
-     idactivite int not null,
+     idactivite int not null AUTO_INCREMENT,
      heure date not null,
      description varchar(250) not null,
      idsalon int null,
@@ -39,13 +39,13 @@ create table activiteserveur (
      constraint ID_activiteserveur_ID primary key (idactivite));
 
 create table administrateur (
-     idadministrateur int not null,
+     idadministrateur int not null AUTO_INCREMENT,
      iduser int not null,
      constraint ID_administrateur_ID primary key (idadministrateur),
      constraint FKuse_adm_ID unique (iduser));
 
 create table adresse (
-     idadresse int not null,
+     idadresse int not null AUTO_INCREMENT,
      rue varchar(100) not null,
      numero varchar(10) not null,
      ville varchar(50) not null,
@@ -54,26 +54,26 @@ create table adresse (
      constraint ID_adresse_ID primary key (idadresse));
 
 create table gere (
-     idadministrateur int not null,
+     idadministrateur int not null ,
      idserveur int not null,
      constraint ID_gere_ID primary key (idserveur, idadministrateur));
 
 create table logsalon (
-     idlog int not null,
+     idlog int not null AUTO_INCREMENT,
      date date not null,
      log varchar(250) not null,
      idsalon int not null,
      constraint ID_logsalon_ID primary key (idlog));
 
 create table logserveur (
-     idlog int not null,
+     idlog int not null AUTO_INCREMENT,
      date date not null,
      log varchar(250) not null,
      idserveur int not null,
      constraint ID_logserveur_ID primary key (idlog));
 
 create table moderateur (
-     idmoderateur int not null,
+     idmoderateur int not null AUTO_INCREMENT,
      iduser int not null,
      constraint ID_moderateur_ID primary key (idmoderateur),
      constraint FKuse_mod_ID unique (iduser));
@@ -84,21 +84,21 @@ create table modere (
      constraint ID_modere_ID primary key (idsalon, idmoderateur));
 
 create table pays (
-     idpays int not null,
+     idpays int not null AUTO_INCREMENT,
      nompays varchar(100) not null,
      constraint ID_pays_ID primary key (idpays));
 
 create table salon (
-     idsalon int not null,
+     idsalon int not null AUTO_INCREMENT,
      nom varchar(50) not null,
-     password varchar(64) null,
+     password varchar(20) null,
      iduser int null,
      idtype int not null,
      idserveur int not null,
      constraint ID_salon_ID primary key (idsalon));
 
 create table serveur (
-     idserveur int not null,
+     idserveur int not null AUTO_INCREMENT,
      nom varchar(50) not null,
      IP varchar(15) not null,
      port int not null,
@@ -107,28 +107,29 @@ create table serveur (
      constraint ID_serveur_ID primary key (idserveur));
 
 create table typeactiviteserveur (
-     idtype int not null,
-     type varchar(100) not null,
+     idtype int not null AUTO_INCREMENT,
+     type varchar(50) not null,
      constraint ID_typeactiviteserveur_ID primary key (idtype));
 
 create table typepactivitesalon (
-     idtype int not null,
+     idtype int not null AUTO_INCREMENT,
      type varchar(100) not null,
      constraint ID_typepactivitesalon_ID primary key (idtype));
 
 create table typesalon (
-     idtype int not null,
+     idtype int not null AUTO_INCREMENT,
      type varchar(50) not null,
      constraint ID_typesalon_ID primary key (idtype));
 
 create table user (
-     iduser int not null,
-     prenom varchar(50) not null,
-     nom varchar(100) not null,
-     email varchar(100) not null,
+     iduser int not null AUTO_INCREMENT,
+     prenom varchar(25) not null,
+     nom varchar(50) not null,
+     email varchar(50) not null UNIQUE,
      password varchar(64) not null,
      nick varchar(20) not null,
-     ban char not null,
+     ban tinyint not null,
+     online tinyint not null,
      idadresse int not null,
      constraint ID_user_ID primary key (iduser));
 
@@ -379,4 +380,7 @@ create index FKreside_IND
 
 create unique index email_user
      on user (email);
+
+
+
 

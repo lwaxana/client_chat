@@ -65,12 +65,12 @@ classcanvas 139909 class_ref 142981 // Modere
   xyz 489.6 70.9 2000
 end
 relationcanvas 133637 relation_ref 128517 // <association>
-  from ref 129029 z 2001 stereotype "<<set>>" xyz 799 246 3000 to ref 133125
-  role_a_pos 795 255 3000 role_b_pos 878 99 3000
-  multiplicity_a_pos 791 264 3000 multiplicity_b_pos 912 124 3000
+  from ref 129029 z 2001 stereotype "<<set>>" xyz 799 250 3000 to ref 133125
+  role_a_pos 791 245 3000 role_b_pos 878 101 3000
+  multiplicity_a_pos 791 270 3000 multiplicity_b_pos 912 126 3000
 end
 relationcanvas 134277 relation_ref 128773 // <association>
-  from ref 129029 z 2001 stereotype "<<set>>" xyz 977.5 149.5 3000 to ref 129157
+  from ref 129029 z 2001 stereotype "<<set>>" xyz 977 149 3000 to ref 129157
   role_a_pos 984 206 3000 role_b_pos 977 140 3000
   multiplicity_a_pos 958 206 3000 multiplicity_b_pos 960 147 3000
 end
@@ -88,19 +88,19 @@ relationcanvas 134533 relation_ref 129029 // <generalisation>
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 134917 relation_ref 129157 // <association>
-  from ref 129413 z 2001 stereotype "<<set>>" xyz 833 642.5 3000 to ref 129285
+  from ref 129413 z 2001 stereotype "<<set>>" xyz 833 642 3000 to ref 129285
   role_a_pos 834 653 3000 role_b_pos 857 712 3000
   multiplicity_a_pos 834 678 3000 multiplicity_b_pos 906 737 3000
 end
 relationcanvas 135173 relation_ref 129413 // <association>
-  from ref 129285 z 2001 stereotype "<<set>>" xyz 668.5 648.5 3000 to ref 128901
+  from ref 129285 z 2001 stereotype "<<set>>" xyz 668 648 3000 to ref 128901
   role_a_pos 395 620 3000 role_b_pos 645 618 3000
   multiplicity_a_pos 395 645 3000 multiplicity_b_pos 713 643 3000
 end
 relationcanvas 135429 relation_ref 129669 // <association>
-  from ref 133125 z 2001 stereotype "<<set>>" xyz 657.5 576.5 3000 to ref 129285
-  role_a_pos 779 577 3000 role_b_pos 753 392 3000
-  multiplicity_a_pos 755 577 3000 multiplicity_b_pos 753 409 3000
+  from ref 133125 z 2001 stereotype "<<set>>" xyz 658.5 584 3000 to ref 129285
+  role_a_pos 780 577 3000 role_b_pos 755 408 3000
+  multiplicity_a_pos 756 577 3000 multiplicity_b_pos 717 408 3000
 end
 relationcanvas 135685 relation_ref 129797 // <association>
   from ref 129541 z 2001 stereotype "<<set>>" xyz 136 676 3000 to ref 128901
@@ -113,33 +113,33 @@ relationcanvas 135813 relation_ref 136325 // <association>
   multiplicity_a_pos 713 614 3000 multiplicity_b_pos 394 363 3000
 end
 relationcanvas 135941 relation_ref 136453 // <association>
-  from ref 128517 z 2001 stereotype "<<set>>" xyz 127.5 425.5 3000 to ref 128133
+  from ref 128517 z 2001 stereotype "<<set>>" xyz 127 425 3000 to ref 128133
   role_a_pos 149 443 3000 role_b_pos 262 331 3000
   multiplicity_a_pos 149 468 3000 multiplicity_b_pos 276 349 3000
 end
 relationcanvas 136069 relation_ref 136581 // <association>
-  from ref 128261 z 2001 stereotype "<<set>>" xyz 236 287.5 3000 to ref 128517
+  from ref 128261 z 2001 stereotype "<<set>>" xyz 236 287 3000 to ref 128517
   role_a_pos 255 275 3000 role_b_pos 134 183 3000
   multiplicity_a_pos 280 289 3000 multiplicity_b_pos 134 208 3000
 end
 relationcanvas 136197 relation_ref 136709 // <association>
-  from ref 128389 z 2001 stereotype "<<set>>" xyz 346.5 126.5 3000 to ref 128517
+  from ref 128389 z 2001 stereotype "<<set>>" xyz 346 126 3000 to ref 128517
   role_a_pos 309 243 3000 role_b_pos 349 114 3000
   multiplicity_a_pos 323 258 3000 multiplicity_b_pos 326 114 3000
 end
 relationcanvas 136325 relation_ref 136837 // <association>
-  from ref 128005 z 2001 stereotype "<<set>>" xyz 236 66.5 3000 to ref 128389
+  from ref 128005 z 2001 stereotype "<<set>>" xyz 236 66 3000 to ref 128389
   role_a_pos 228 50 3000 role_b_pos 150 52 3000
   multiplicity_a_pos 284 75 3000 multiplicity_b_pos 153 70 3000
 end
 relationcanvas 137733 relation_ref 137733 // <association>
   decenter_end 135
-  from ref 128645 z 2001 stereotype "<<set>>" xyz 525.5 183.5 3000 to ref 128517
+  from ref 128645 z 2001 stereotype "<<set>>" xyz 525 183 3000 to ref 128517
   role_a_pos 394 261 3000 role_b_pos 637 63 3000
   multiplicity_a_pos 405 276 3000 multiplicity_b_pos 680 79 3000
 end
 relationcanvas 137861 relation_ref 144261 // <association>
-  from ref 128517 z 2001 stereotype "<<set>>" xyz 301 385.5 3000 to ref 128901
+  from ref 128517 z 2001 stereotype "<<set>>" xyz 301 385 3000 to ref 128901
   role_a_pos 297 544 3000 role_b_pos 308 372 3000
   multiplicity_a_pos 323 559 3000 multiplicity_b_pos 313 359 3000
 end
@@ -150,8 +150,8 @@ relationcanvas 137989 relation_ref 144389 // <association>
 end
 relationcanvas 138117 relation_ref 144517 // <association>
   from ref 128517 z 2001 to ref 133125
-  role_a_pos 656 295 3000 role_b_pos 394 296 3000
-  multiplicity_a_pos 660 320 3000 multiplicity_b_pos 394 321 3000
+  role_a_pos 656 301 3000 role_b_pos 394 297 3000
+  multiplicity_a_pos 660 326 3000 multiplicity_b_pos 394 322 3000
 end
 line 138373 -_-_
   from ref 138245 z 2002 to ref 137989

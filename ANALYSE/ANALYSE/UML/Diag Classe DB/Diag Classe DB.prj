@@ -1,6 +1,6 @@
 format 76
 "Diag Classe DB"
-  revision 6
+  revision 7
   modified_by 5 "Lwaxana"
   java_root_dir "javaclass/"
 
@@ -351,7 +351,7 @@ ${members}}
 	relation_ref 137605 // <composition>
       end
 
-      classrelation 140677 // moderateur (<association>)
+      classrelation 140677 // <association>
 	relation_ref 137733 // <association>
       end
 
@@ -420,7 +420,7 @@ ${members}}
 	  b role_name "moderateur" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 140677 // moderateur (<association>)
+	    classrelation_ref 140677 // <association>
 	  association_type class_ref 142981 // Modere
       end
     end
@@ -540,7 +540,7 @@ ${members}}
 	idl_decl ""
       end
 
-      classrelation 130437 // activiteserveur (<association>)
+      classrelation 130437 // <association>
 	relation_ref 129413 // <association>
       end
 
@@ -548,7 +548,7 @@ ${members}}
 	relation_ref 129541 // <association>
       end
 
-      classrelation 131205 // log (<association>)
+      classrelation 131205 // <association>
 	relation_ref 129797 // <association>
       end
 
@@ -789,10 +789,10 @@ ${members}}
 	  b role_name "activiteserveur" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 130437 // activiteserveur (<association>)
+	    classrelation_ref 130437 // <association>
       end
 
-      classrelation 130949 // user (<association>)
+      classrelation 130949 // <association>
 	relation_ref 129669 // <association>
       end
 
@@ -901,7 +901,7 @@ ${members}}
 	  b role_name "log" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 131205 // log (<association>)
+	    classrelation_ref 131205 // <association>
       end
     end
 
@@ -1012,7 +1012,7 @@ ${members}}
 	  b role_name "user" multiplicity "0..1" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
 "
-	    classrelation_ref 130949 // user (<association>)
+	    classrelation_ref 130949 // <association>
       end
 
       classrelation 140165 // <composition>
@@ -1021,6 +1021,16 @@ ${members}}
 
       classrelation 147845 // salon (<association>)
 	relation_ref 144517 // <association>
+      end
+
+      attribute 146309 "online"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 

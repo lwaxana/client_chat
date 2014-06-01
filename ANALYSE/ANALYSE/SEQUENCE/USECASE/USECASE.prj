@@ -1,6 +1,6 @@
 format 76
 "USECASE"
-  revision 3
+  revision 4
   modified_by 5 "Lwaxana"
 
 
@@ -1140,6 +1140,24 @@ ${members}}
 	  stereotype "include"
 	  on usecase_ref 129285 // Créer un salon privé
       end
+    end
+
+    sequencediagram 134789 "SEQUENCE"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    class 135173 "Serveur"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
     end
   end
 end
