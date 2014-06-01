@@ -16,16 +16,16 @@ durationcanvas 128901 classinstance_ref 128133 // :Serveur
   xyzwh 303 114 2010 11 25
 end
 durationcanvas 129541 classinstance_ref 128389 // :Personne
-  xyzwh 103 207 2010 11 40
+  xyzwh 103 206 2010 11 55
 end
 durationcanvas 129669 classinstance_ref 128133 // :Serveur
-  xyzwh 303 207 2010 11 46
+  xyzwh 303 206 2010 11 55
 end
 durationcanvas 130437 classinstance_ref 128133 // :Serveur
-  xyzwh 303 256 2010 11 40
+  xyzwh 303 273 2010 11 39
 end
 durationcanvas 130565 classinstance_ref 128261 // :DB
-  xyzwh 506 249 2010 11 38
+  xyzwh 506 274 2010 11 33
 end
 durationcanvas 131205 classinstance_ref 128133 // :Serveur
   xyzwh 303 154 2010 11 40
@@ -34,30 +34,24 @@ durationcanvas 131333 classinstance_ref 128389 // :Personne
   xyzwh 103 159 2010 11 25
 end
 durationcanvas 131589 classinstance_ref 128261 // :DB
-  xyzwh 506 300 2010 11 35
+  xyzwh 506 331 2010 11 35
 end
 durationcanvas 131717 classinstance_ref 128133 // :Serveur
-  xyzwh 303 301 2010 11 31
+  xyzwh 303 325 2010 11 33
 end
 durationcanvas 132229 classinstance_ref 128133 // :Serveur
-  xyzwh 303 348 2010 11 40
+  xyzwh 303 366 2010 11 49
 end
 durationcanvas 132357 classinstance_ref 128261 // :DB
-  xyzwh 506 348 2010 11 25
-end
-durationcanvas 132613 classinstance_ref 128261 // :DB
-  xyzwh 506 405 2010 11 40
-end
-durationcanvas 132741 classinstance_ref 128133 // :Serveur
-  xyzwh 303 405 2010 11 25
+  xyzwh 506 385 2010 11 31
 end
 durationcanvas 132997 classinstance_ref 128133 // :Serveur
-  xyzwh 303 445 2010 11 40
+  xyzwh 303 419 2010 11 40
 end
 durationcanvas 133125 classinstance_ref 128389 // :Personne
-  xyzwh 103 445 2010 11 46
+  xyzwh 103 416 2010 11 61
   overlappingdurationcanvas 133637
-    xyzwh 109 460 2020 11 25
+    xyzwh 109 436 2020 11 25
   end
 end
 reflexivemsg 128645 synchronous
@@ -74,15 +68,15 @@ msg 129029 synchronous
 msg 129797 asynchronous
   from durationcanvas_ref 129541
   to durationcanvas_ref 129669
-  yz 207 2015 explicitmsg "Envoi demande d'inscription"
+  yz 206 2015 explicitmsg "Envoi demande d'inscription"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 142 193
+  label_xy 142 192
 msg 130693 asynchronous
   from durationcanvas_ref 130437
   to durationcanvas_ref 130565
-  yz 256 2015 explicitmsg "verification email"
+  yz 274 2015 explicitmsg "verification email"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 370 242
+  label_xy 370 260
 msg 131461 return
   from durationcanvas_ref 131205
   to durationcanvas_ref 131333
@@ -92,30 +86,30 @@ msg 131461 return
 msg 131845 return
   from durationcanvas_ref 131589
   to durationcanvas_ref 131717
-  yz 308 2015 explicitmsg "Email n'existe pas"
+  yz 346 2015 explicitmsg "Email n'existe pas"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 368 294
+  label_xy 368 332
 msg 132485 asynchronous
   from durationcanvas_ref 132229
   to durationcanvas_ref 132357
-  yz 348 2015 explicitmsg "Enregistrement utilisateur"
+  yz 392 2015 explicitmsg "Enregistrement utilisateur"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 349 334
-msg 132869 return
-  from durationcanvas_ref 132613
-  to durationcanvas_ref 132741
-  yz 405 2015 explicitmsg "Enregistrement ok ( retour ID User )"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 325 392
+  label_xy 349 378
 msg 133253 asynchronous
   from durationcanvas_ref 132997
   to durationcanvas_ref 133125
-  yz 445 2015 explicitmsg "Enregistrement ok"
+  yz 419 2015 explicitmsg "Enregistrement ok"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 165 431
+  label_xy 165 405
 reflexivemsg 133765 synchronous
   to durationcanvas_ref 133637
-  yz 460 2025 explicitmsg "Message \"Ok pour login\""
+  yz 436 2025 explicitmsg "Message \"Ok pour login\""
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 132 471
+  label_xy 132 447
+msg 133893 return
+  from durationcanvas_ref 129669
+  to durationcanvas_ref 129541
+  yz 244 2015 explicitmsg "Connexion SSL ok"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 164 230
 end

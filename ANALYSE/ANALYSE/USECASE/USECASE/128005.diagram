@@ -23,7 +23,7 @@ classcanvas 129925 class_ref 128645 // Personne
   xyz 180 75 2005
 end
 usecasecanvas 130181 usecase_ref 128005 // S'inscrire comme utilisateur
-  xyzwh 617 108 3005 64 32 label_xy 584 140
+  xyzwh 583 115 3005 64 32 label_xy 550 147
 end
 note 130693 "Tous les cas Utilisateur, Moderateur
 et Administrateur éxigent d'être authentifié"
@@ -33,7 +33,7 @@ note 130949 "Interaction DataBase"
 note 131077 "Serveur Chat"
   xyzwh 1073 208 3011 99 35
 usecasecanvas 132101 usecase_ref 128261 // S'authentifier
-  xyzwh 791 90 3005 64 32 label_xy 791 122
+  xyzwh 877 139 3005 64 32 label_xy 877 171
 end
 usecasecanvas 133509 usecase_ref 128389 // Gérer son compte
   xyzwh 427 268 3005 64 32 label_xy 416 300
@@ -73,6 +73,9 @@ usecasecanvas 140933 usecase_ref 129925 // Gere salon
 end
 usecasecanvas 141829 usecase_ref 139781 // Fermer salon privé
   xyzwh 593 712 3005 64 32 label_xy 580 744
+end
+usecasecanvas 142213 usecase_ref 146309 // Se connecter au serveur
+  xyzwh 748 45 3011 64 32 label_xy 720 77
 end
 relationcanvas 129541 relation_ref 128133 // <generalisation>
   decenter_begin 476
@@ -127,13 +130,22 @@ simplerelationcanvas 141317 simplerelation_ref 145157
   from ref 134533 z 3006 stereotype "<<include>>" xyz 533 355 3000 to ref 134277
 end
 simplerelationcanvas 141445 simplerelation_ref 145285
-  from ref 135557 z 3006 stereotype "<<include>>" xyz 526 399.5 3000 to ref 134277
+  from ref 135557 z 3006 stereotype "<<include>>" xyz 526 399 3000 to ref 134277
 end
 simplerelationcanvas 141701 simplerelation_ref 145413
   from ref 140933 z 3006 stereotype "<<include>>" xyz 627 653 3000 to ref 136325
 end
 simplerelationcanvas 141957 simplerelation_ref 145541
   from ref 141829 z 3006 stereotype "<<include>>" xyz 554 673 3000 to ref 136325
+end
+simplerelationcanvas 142085 simplerelation_ref 152069
+  from ref 132101 z 3006 stereotype "<<include>>" xyz 732 141.5 3000 to ref 130181
+end
+simplerelationcanvas 142341 simplerelation_ref 152197
+  from ref 132101 z 3012 stereotype "<<include>>" xyz 858 100 3000 to ref 142213
+end
+simplerelationcanvas 142469 simplerelation_ref 152325
+  from ref 130181 z 3012 stereotype "<<include>>" xyz 640 79 3000 to ref 142213
 end
 line 131205 -_-_
   from ref 131077 z 3012 to ref 128389
